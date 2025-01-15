@@ -6,8 +6,8 @@ import { Page404Component } from './page404/page404.component';
 
 export const routes: Routes = [
     {path: "", redirectTo: "/home", pathMatch: "full"},
-    {path: "/home", component: HomeSectionComponent},
-    {path: "/search", component: SearchSectionComponent},
-    {path: "/manage", component: ManageSectionComponent},
+    {path: "home", component: HomeSectionComponent},
+    {path: "search", component: SearchSectionComponent},
+    {path: "manage", component: ManageSectionComponent},
     {path: "**", component: Page404Component}
 ];

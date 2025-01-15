@@ -4,7 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-header',
   imports: [],
   templateUrl: './header.component.html',
-  styles: ``
+  styles: `
+    div {
+      background-color: rgb(240, 240, 240);
+    }
+  `
 })
 export class HeaderComponent {
 

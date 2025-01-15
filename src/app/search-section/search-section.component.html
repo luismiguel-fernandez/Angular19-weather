@@ -1,1 +1,15 @@
-<p>search-section works!</p>
+<h2>Search cities</h2>
+<div class="input-group mb-3">
+  <input (keyup.enter)="searchByName()"  type="text" class="form-control" required placeholder="Write the name of a city">
+  <button (click)="searchByName()" class="btn btn-primary" type="button" id="button-addon2">Search</button>
+</div>
+
+<ul class="list-group">
+	<!-- RESULTADOS DE BUSQUEDA EN FORMA DE LI COMO EL DE ABAJO -->
+    @for (item of items; track $index) {
+        <li class="list-group-item">
+            <!-- AQUI VA EL NOMBRE Y EL PAIS O CODIGO DE PAIS -->
+            <!-- AQUÍ VA EL BOTON DE HACER FAVORITA -->
+        </li>
+    }
+</ul>
