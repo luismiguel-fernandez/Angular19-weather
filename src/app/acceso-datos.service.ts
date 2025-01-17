@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -16,6 +17,12 @@ https://api.openweathermap.org/data/2.5/weather?
 	&
 	units=metric
 */
+  private urlBase = "https://api.openweathermap.org/data/2.5/"
+  private urlSufix = "&appid=0617ecda468c5e9492d75f4388b1ddf5&units=metric"
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+  searchByName(pattern:string) {
+	return this.http.get(this.urlBase + "find?q=" + pattern + this.urlSufix)
+  }
 }
