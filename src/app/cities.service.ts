@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class CitiesService {
 
   private cities:any[] = []
+  private cityAtHome:any = {}
 
   constructor() { }
 
@@ -23,7 +24,15 @@ export class CitiesService {
     return this.cities
   }
 
+  getCityAtHome() {
+    return this.cityAtHome
+  }
+
   isAlreadyInMyCities(aCity:any) {
     return this.cities.find( c => c.id == aCity.id )
+  }
+
+  setCityAtHome(aCity:any) {
+    this.cityAtHome = aCity
   }
 }

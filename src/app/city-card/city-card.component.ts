@@ -15,4 +15,8 @@ export class CityCardComponent {
   deleteCity() {
     this.citiesSrvc.deleteCity(this.city)
   }
+
+  setCityAtHome() {
+    this.citiesSrvc.setCityAtHome(this.city)
+  }
 }
