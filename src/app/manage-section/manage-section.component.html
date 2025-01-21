@@ -12,6 +12,6 @@
   <div class="row row-cols-md-5">
       <!-- LISTA DE CIUDADES FAVORITAS -->
        @for (city of getCities(); track $index) {
-        <app-city-card></app-city-card>
+        <app-city-card [city]="city"></app-city-card>
        }
   </div>

@@ -15,6 +15,10 @@ export class CitiesService {
     }
   }
 
+  deleteCity(aCity:any) {
+    this.cities = this.cities.filter( c => c.id != aCity.id )
+  }
+
   getCities() {
     return this.cities
   }

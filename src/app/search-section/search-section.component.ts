@@ -19,6 +19,45 @@ export class SearchSectionComponent {
     this.citiesSrvc.addCity(newCity)
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  isAlreadyInCities(aCity:any) {
+    return this.citiesSrvc.isAlreadyInMyCities(aCity)
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  getResults() {
+    return this.results
+  }
+
   searchByName(pattern:string) {
     //pedir datos al servicio
     this.apiSrvc.searchByName(pattern).subscribe(
@@ -31,8 +70,5 @@ export class SearchSectionComponent {
 
   }
 
-  getResults() {
-    return this.results
-  }
 
 }
