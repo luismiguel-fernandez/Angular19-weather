@@ -1,8 +1,8 @@
 <div class="card text-center bg-light mb-2 mr-2">
     <div class="card-body">
       <h5 class="card-title">  {{ city.name }} </h5>
-      <p class="card-text">  {{ city.sys.country }}  </p>
-      <p class="card-text">  {{ city.main.temp }} ºC  </p>
+      <p class="card-text">  {{ city.sys.country | countryCode }}  </p>
+      <p class="card-text">  {{ city.main.temp | temp }} </p>
       <p>
         <button (click)="deleteCity()" type="button" class="btn btn-outline-secondary">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
