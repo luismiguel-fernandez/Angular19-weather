@@ -19,40 +19,9 @@ export class SearchSectionComponent {
     this.citiesSrvc.addCity(newCity)
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   isAlreadyInCities(aCity:any) {
     return this.citiesSrvc.isAlreadyInMyCities(aCity)
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   getResults() {
     return this.results

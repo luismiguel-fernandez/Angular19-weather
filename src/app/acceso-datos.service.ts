@@ -21,8 +21,12 @@ https://api.openweathermap.org/data/2.5/weather?
   private urlSufix = "&appid=0617ecda468c5e9492d75f4388b1ddf5&units=metric"
 
   constructor(private http:HttpClient) { }
+  
+  updateById(id:number) {
+    return this.http.get(this.urlBase + "weather?id=" + id + this.urlSufix)
+  }
 
   searchByName(pattern:string) {
-	return this.http.get(this.urlBase + "find?q=" + pattern + this.urlSufix)
+	  return this.http.get(this.urlBase + "find?q=" + pattern + this.urlSufix)
   }
 }
